@@ -31,3 +31,27 @@ echo "+-------------------------------------------------------------------------
 
 sudo softwareupdate --install -a --verbose
 
+echo "+------------------------------------------------------------------------------------------------------------+"
+echo "| Step 01.05: Download setup repository                                                                      |"
+echo "+------------------------------------------------------------------------------------------------------------+"
+
+export OSXDEVSETUP_HOME=$HOME/.osxdevsetup
+export OSXDEVSETUP_GITPATH=https://github.com/aedenj/osx-dev-setup.git
+
+runme() {
+	cmd=$*
+	echo "$cmd"
+	$cmd
+	ret=$?
+	if [[ ${ret} != 0 ]]; then
+		echo " "
+		echo "ERROR: Return value non-zero for: $cmd"
+		echo " "
+		exit 1
+	fi
+}
+
+echo " "
+runme git clone ${OSXDEVSETUP_GITPATH} ${OSXDEVSETUP_HOME} --recursive
+cd ${OSXDEVSETUP_HOME}
+echo " "
