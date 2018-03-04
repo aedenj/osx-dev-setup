@@ -40,6 +40,34 @@ brew install coreutils
 brew install bash
 brew tap homebrew/core
 
+# ###############################################################################################
+# bash-completion2
+# Warning!!!       bash-completion2 have refrences in ~/.bash_profile  file
+#                  by defaults:
+#                              lines 45-68 in .bash_profile are comments out
+#                              un comment them based on your needs
+# ###############################################################################################
+brew install bash-completion2
+# We installed the new shell, now we have to activate it
+echo "Adding the newly installed shell to the list of allowed shells"
+
+# Prompts for password
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+
+# Change to the new shell, prompts for password
+chsh -s /usr/local/bin/bash
+
+# ###############################################################################################
+# Install Cask
+# ###############################################################################################
+brew install cask
+brew tap caskroom/versions
+
+# Development tool casks
+brew cask install --appdir="/Applications" virtualbox
+
+brew install cockatrice --appdir="/Applications"
+
 
 # Remove outdated versions from the cellar. 
 brew cleanup 
