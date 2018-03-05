@@ -63,11 +63,22 @@ chsh -s /usr/local/bin/bash
 brew install cask
 brew tap caskroom/versions
 
-# Development tool casks
+# Development tools 
 brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" iterm2
+brew cask install --appdir="~/Applications" java
+brew cask install --appdir="/Applications" google-chrome
+brew cask install --appdir="/Applications" docker
+brew install ack
+brew install git
+brew install jq
 
-brew install cockatrice --appdir="/Applications"
+# Fun
+brew cask install --appdir="/Applications" cockatrice
+brew cask install --appdir="/Applications" evernote
 
+# Password management
+brew cask install --appdir="/Applications" 1password
 
 # Remove outdated versions from the cellar. 
 brew cleanup 
