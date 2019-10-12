@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export OSXDEVSETUP_HOME=$HOME/.osxdevsetup
+
 function setup() {
   sudo -v
 

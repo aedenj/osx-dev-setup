@@ -69,7 +69,7 @@ chsh -s /usr/local/bin/bash
 # Install Cask
 # ###############################################################################################
 brew install cask
-brew tap caskroom/versions
+brew tap homebrew/cask-versions
 
 # Development tools 
 brew cask install --appdir="/Applications" alfred
