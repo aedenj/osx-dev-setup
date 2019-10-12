@@ -173,8 +173,6 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
-
-
 # Show item info at the bottom of the icons on the desktop
 /usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist
 
@@ -281,6 +279,34 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
  
 # Enable “Do Not Track” 
 defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true 
+
+
+###############################################################################
+# Terminal & iTerm 2                                                          #
+###############################################################################
+start_if_needed() {
+  local grep_name="[${1:0:1}]${1:1}"
+
+  if [[ -z $(ps aux | grep -e "${grep_name}") ]]; then
+    if [ -e ~/Applications/$1.app ]; then
+      open ~/Applications/$1.app
+    else
+      if [ -e /Applications/$1.app ]; then
+        open /Applications/$1.app
+      fi
+    fi
+  fi
+
+  true
+}
+
+# Install the Solarized Dark theme for iTerm
+start_if_needed iTerm
+open "${OSXDEVSETUP_HOME}/solarized-dark.itermcolors"
+
+# Don’t display the annoying prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
 
 ###############################################################################
 # Time Machine                                                                #
