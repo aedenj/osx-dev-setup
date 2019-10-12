@@ -1,5 +1,6 @@
 source ~/.bash/aliases
 source ~/.bash/coreutils
+source ~/.bash/gettext
 
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
@@ -14,5 +15,6 @@ fi
 #remove dups in the command line history
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
+export OSXDEVSETUP_HOME=~/.osxdevsetup
 shopt -s histappend
 export PATH
