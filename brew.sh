@@ -28,11 +28,19 @@ fi
 brew update 
  
 # Upgrade any already-installed formulae. 
-brew upgrade 
+brew upgrade --all
  
 # Install GNU core utilities (those that come with macOS are outdated). 
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`. 
 brew install coreutils 
+sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+
+# Install some other useful utilities like `sponge`.
+brew install moreutils
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew install findutils
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew install gnu-sed --with-default-names
 
 # ###############################################################################################
 # Install Bash 4.
@@ -64,6 +72,7 @@ brew install cask
 brew tap caskroom/versions
 
 # Development tools 
+brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="~/Applications" java
@@ -71,11 +80,9 @@ brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" docker
 brew install ack
 brew install git
+brew install git-extras
 brew install jq
 
-# Fun
-brew cask install --appdir="/Applications" cockatrice
-brew cask install --appdir="/Applications" evernote
 
 # Password management
 brew cask install --appdir="/Applications" 1password
