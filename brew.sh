@@ -81,6 +81,7 @@ brew cask install --appdir="/Applications" docker
 brew install ack
 brew install git
 brew install git-extras
+brew install bash-git-prompt
 brew install jq
 
 

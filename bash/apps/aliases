@@ -1,0 +1,32 @@
+alias ls='ls -G'
+alias ll='ls -Al'
+alias mkdir='mkdir -pv'
+alias ..='cd ..'
+alias r='rails'
+alias b='bundle'
+alias be='bundle exec'
+alias sb='source ~/.bashrc'
+alias ca='cat ~/.bash/aliases'
+alias rsp='rails server puma'
+alias mysql='mysql --auto-rehash -u root -p'
+
+#git aliases
+alias g='git'
+alias glx='git log --graph --all --decorate --pretty=format:"%C(magenta)%h %C(blue)%ai %C(green)%an %C(cyan)%s %C(yellow bold)%d"'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcm='git checkout master'
+alias gs='git status'
+alias gf='git fetch -p'
+alias gp='git pull'
+alias gct='git add --all :/;git commit -am'
+alias gps='git push'
+alias grm='git rebase master'
+alias grc='git rebase --continue'
+alias gca='git commit --amend'
+#heroku
+alias ghp='git push heroku master'
+
+#powder
+alias po='powder open'
+alias pr='powder restart'

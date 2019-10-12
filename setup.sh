@@ -20,6 +20,7 @@ function setup() {
       echo "------------------------------"
       echo ""
       source ./brew.sh
+      source ./configure-bash.sh
     fi
     if [ $ARG == "macos" ] || [ $ARG == "all" ]; then
       # Run the macos.sh Script
