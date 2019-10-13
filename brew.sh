@@ -82,6 +82,7 @@ brew install git
 brew install git-extras
 brew install bash-git-prompt
 brew install jq
+brew install macvim
 
 
 # Password management
