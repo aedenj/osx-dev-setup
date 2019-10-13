@@ -9,3 +9,4 @@ cd ~/ && curl -O https://raw.githubusercontent.com/aedenj/osx-dev-setup/master/b
 The bootstrap script downloaded above will initiate OS X updates, install the XCode command line tools and clone this repository that contains the rest of the setup scripts into `~/.osxdevsetup`.
 Because some updates require restarts re-run the bootstrap script from `~/.osxdevsetup` until no updates are left.
 
+Now we're ready to install the useful stuff. Simply run `./setup all`.
