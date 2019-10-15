@@ -1,8 +1,3 @@
-# ############################################################################################### 
-# Warning!!!       This script required few times of entering password 
-# 
-# ############################################################################################### 
- 
 #!/usr/bin/env bash 
  
 # Install command-line tools using Homebrew. 
@@ -75,14 +70,13 @@ brew tap homebrew/cask-versions
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="~/Applications" java
-brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" docker
 brew install ack
 brew install git
 brew install git-extras
 brew install bash-git-prompt
 brew install jq
-brew install macvim
+brew install cmake macvim
 
 
 # Password management
