@@ -24,6 +24,13 @@ function setup() {
       source ./brew.sh
       source ./configure-bash.sh
     fi
+    if [ $ARG == "githubkey" ] || [ $ARG == "all" ]; then
+      echo "------------------------------"
+      echo " Setup a ssh key for a github account."
+      echo "------------------------------"
+      echo ""
+      source ./github-ssh-key-gen.sh
+    fi
     if [ $ARG == "macos" ] || [ $ARG == "all" ]; then
       # Run the macos.sh Script
       # I strongly suggest you read through the commented osx.sh
@@ -54,6 +61,9 @@ if [ $# -eq 0 ]; then
     echo "+---------------------------------------------------------------------+"
     echo "| To install selected packagess run:                                  |"
     echo "|     ./setup brew macos                                              |"
+    echo "+---------------------------------------------------------------------+"
+    echo "| To install selected packagess run:                                  |"
+    echo "|     ./setup brew macos githubkey                                    |"
     echo "+---------------------------------------------------------------------+"
     echo ""
     exit 1
