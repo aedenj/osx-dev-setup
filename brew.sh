@@ -77,10 +77,10 @@ brew install bash-git-prompt
 brew install jq
 brew install cmake macvim
 
-brew install node
 brew install nvm
-
 mkdir ~/.nvm
+
+nvm install node
 
 # Password management
 brew cask install --appdir="/Applications" 1password
