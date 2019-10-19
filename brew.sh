@@ -84,6 +84,7 @@ nvm install node
 
 # Password management
 brew cask install --appdir="/Applications" 1password
+brew cask install --appdir="/Applications" 1password-cli
 
 # Remove outdated versions from the cellar.
 brew cleanup
