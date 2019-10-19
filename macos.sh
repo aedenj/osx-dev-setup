@@ -1,4 +1,4 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 
 # Close any open System Preferences panes
 osascript -e 'tell application "System Preferences" to quit'
@@ -116,8 +116,8 @@ defaults write com.apple.screencapture type -string "png"
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
 
-# Finder: show hidden files by default 
-defaults write com.apple.finder AppleShowAllFiles -bool true 
+# Finder: show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Set Desktop as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
@@ -129,15 +129,15 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
- 
-# Finder: show all filename extensions 
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true 
- 
-# Finder: show status bar 
-defaults write com.apple.finder ShowStatusBar -bool true 
- 
-# Finder: show path bar 
-defaults write com.apple.finder ShowPathbar -bool true 
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
 
 # Finder: allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
@@ -146,10 +146,10 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # When performing a search, search the current folder by default
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf" 
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-# Keep folders on top when sorting by name 
-defaults write com.apple.finder _FXSortFoldersFirst -bool true 
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -159,10 +159,10 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
 # Tweak the spring loading delay for directories
 defaults write NSGlobalDomain com.apple.springing.delay -float .5
- 
-# Avoid creating .DS_Store files on network or USB volumes 
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true 
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true 
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Automatically open a new Finder window when a volume is mounted
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
@@ -202,7 +202,7 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Show the ~/Library folder
-chflags nohidden ~/Library 
+chflags nohidden ~/Library
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
@@ -212,97 +212,74 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
     Privileges -bool true
 
 
-############################################################################### 
-# Safari & WebKit                                                             # 
-############################################################################### 
- 
-# Privacy: don’t send search queries to Apple 
-defaults write com.apple.Safari UniversalSearchEnabled -bool false 
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true 
- 
-# Press Tab to highlight each item on a web page 
-defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true 
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true 
- 
-# Show the full URL in the address bar (note: this still hides the scheme) 
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true 
- 
-# Set Safari’s home page to `about:blank` for faster loading 
-defaults write com.apple.Safari HomePage -string "about:blank" 
- 
-# Prevent Safari from opening ‘safe’ files automatically after downloading 
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false 
- 
-# Hide Safari’s sidebar in Top Sites 
-defaults write com.apple.Safari ShowSidebarInTopSites -bool false 
+###############################################################################
+# Safari & WebKit                                                             #
+###############################################################################
+
+# Privacy: don’t send search queries to Apple
+defaults write com.apple.Safari UniversalSearchEnabled -bool false
+defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+# Press Tab to highlight each item on a web page
+defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true
+
+# Show the full URL in the address bar (note: this still hides the scheme)
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+# Set Safari’s home page to `about:blank` for faster loading
+defaults write com.apple.Safari HomePage -string "about:blank"
+
+# Prevent Safari from opening ‘safe’ files automatically after downloading
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+# Hide Safari’s sidebar in Top Sites
+defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
 # Disable Safari’s thumbnail cache for History and Top Sites
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
- 
-# Enable Safari’s debug menu 
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true 
+
+# Enable Safari’s debug menu
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 # Make Safari’s search banners default to Contains instead of Starts With
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 # Remove useless icons from Safari’s bookmarks bar
 defaults write com.apple.Safari ProxiesInBookmarksBar "()"
- 
-# Enable the Develop menu and the Web Inspector in Safari 
-defaults write com.apple.Safari IncludeDevelopMenu -bool true 
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true 
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true 
+
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
- 
-# Disable AutoFill 
-defaults write com.apple.Safari AutoFillFromAddressBook -bool false 
-defaults write com.apple.Safari AutoFillPasswords -bool false 
-defaults write com.apple.Safari AutoFillCreditCardData -bool false 
-defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false 
- 
-# Warn about fraudulent websites 
-defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true 
- 
-# Disable plug-ins 
-defaults write com.apple.Safari WebKitPluginsEnabled -bool false 
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled -bool false 
- 
-# Disable Java 
-defaults write com.apple.Safari WebKitJavaEnabled -bool false 
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false 
- 
-# Block pop-up windows 
-defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false 
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false 
- 
-# Enable “Do Not Track” 
-defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true 
 
+# Disable AutoFill
+defaults write com.apple.Safari AutoFillFromAddressBook -bool false
+defaults write com.apple.Safari AutoFillPasswords -bool false
+defaults write com.apple.Safari AutoFillCreditCardData -bool false
+defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 
-###############################################################################
-# Terminal & iTerm 2                                                          #
-###############################################################################
-start_if_needed() {
-  local grep_name="[${1:0:1}]${1:1}"
+# Warn about fraudulent websites
+defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
 
-  if [[ -z $(ps aux | grep -e "${grep_name}") ]]; then
-    if [ -e ~/Applications/$1.app ]; then
-      open ~/Applications/$1.app
-    else
-      if [ -e /Applications/$1.app ]; then
-        open /Applications/$1.app
-      fi
-    fi
-  fi
+# Disable plug-ins
+defaults write com.apple.Safari WebKitPluginsEnabled -bool false
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled -bool false
 
-  true
-}
+# Disable Java
+defaults write com.apple.Safari WebKitJavaEnabled -bool false
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
 
-# Install the Solarized Dark theme for iTerm
-start_if_needed iTerm
-open "${OSXDEVSETUP_HOME}/solarized-dark.itermcolors"
+# Block pop-up windows
+defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
+
+# Enable “Do Not Track”
+defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -325,24 +302,31 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 # Enable Debug Menu in the Mac App Store
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
- 
-############################################################################### 
-# Activity Monitor                                                            # 
-############################################################################### 
- 
-# Show the main window when launching Activity Monitor 
-defaults write com.apple.ActivityMonitor OpenMainWindow -bool true 
- 
-# Visualize CPU usage in the Activity Monitor Dock icon 
-defaults write com.apple.ActivityMonitor IconType -int 5 
- 
-# Show all processes in Activity Monitor 
-defaults write com.apple.ActivityMonitor ShowCategory -int 0 
- 
-# Sort Activity Monitor results by CPU usage 
-defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage" 
-defaults write com.apple.ActivityMonitor SortDirection -int 0 
 
+###############################################################################
+# Activity Monitor                                                            #
+###############################################################################
+
+# Show the main window when launching Activity Monitor
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+
+# Visualize CPU usage in the Activity Monitor Dock icon
+defaults write com.apple.ActivityMonitor IconType -int 5
+
+# Show all processes in Activity Monitor
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+# Sort Activity Monitor results by CPU usage
+defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+
+###############################################################################
+# Remap Keys                                                                  #
+###############################################################################
+
+#Remap CAPS LOCK (0x700000039) to ESCAPE (0x700000029)
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}]}'
 
 ###############################################################################
 # Kill affected applications                                                  #
