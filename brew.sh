@@ -15,7 +15,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 if test ! $(which brew); then
   echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" fi
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 
 # Make sure we’re using the latest Homebrew.
@@ -78,13 +79,10 @@ brew install jq
 brew install cmake macvim
 
 brew install nvm
-mkdir ~/.nvm
-
-nvm install node
 
 # Password management
 brew cask install --appdir="/Applications" 1password
-brew cask install --appdir="/Applications" 1password-cli
+brew cask install 1password-cli
 
 # Remove outdated versions from the cellar.
 brew cleanup
