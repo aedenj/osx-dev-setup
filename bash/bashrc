@@ -1,6 +1,7 @@
 source ~/.bash/aliases
 source ~/.bash/gettext
 source ~/.bash/nvm
+source ~/.bash/anaconda
 
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
