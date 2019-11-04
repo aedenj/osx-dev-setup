@@ -72,7 +72,14 @@ brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="~/Applications" java
 brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" anaconda
+
 brew cask install --appdir="/Applications" visual-studio-code
+code --install-extension vscodevim.vim
+code --install-extension ms-vscode.Go
+code --install-extension ms-vscode-remote.remote-containers
+
+
+
 brew install ack
 brew install git
 brew install git-extras
