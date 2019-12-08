@@ -24,8 +24,8 @@ alias gps='git push'
 alias grm='git rebase master'
 alias grc='git rebase --continue'
 alias gca='git commit --amend'
-#heroku
-alias ghp='git push heroku master'
+alias gc-jks='git clone git@github.com:aedenj/javascript-kata-starter.git'
+alias gc-gks='git clone git@github.com:aedenj/golang-kata-starter.git'
 
 #powder
 alias po='powder open'
