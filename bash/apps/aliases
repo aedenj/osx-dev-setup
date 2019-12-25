@@ -2,12 +2,10 @@ alias ls='ls -G'
 alias ll='ls -Al'
 alias mkdir='mkdir -pv'
 alias ..='cd ..'
-alias r='rails'
 alias b='bundle'
 alias be='bundle exec'
 alias sb='source ~/.bashrc'
 alias ca='cat ~/.bash/aliases'
-alias rsp='rails server puma'
 alias mysql='mysql --auto-rehash -u root -p'
 
 #git aliases
@@ -28,6 +26,5 @@ alias gc-jks='git clone git@github.com:aedenj/javascript-kata-starter.git'
 alias gc-gks='git clone git@github.com:aedenj/golang-kata-starter.git'
 alias gc-sks='git clone git@github.com:aedenj/scala-kata-starter.git'
 
-#powder
-alias po='powder open'
-alias pr='powder restart'
+#scala
+alias scalarpl='docker run -it --rm hseeberger/scala-sbt:8u222_1.3.5_2.13.1 scala'
