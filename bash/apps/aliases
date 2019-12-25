@@ -27,4 +27,4 @@ alias gc-gks='git clone git@github.com:aedenj/golang-kata-starter.git'
 alias gc-sks='git clone git@github.com:aedenj/scala-kata-starter.git'
 
 #scala
-alias scalarpl='docker run -it --rm hseeberger/scala-sbt:8u222_1.3.5_2.13.1 scala'
+alias scalad='docker run -it --rm hseeberger/scala-sbt:8u222_1.3.5_2.13.1 scala'
