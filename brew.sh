@@ -88,8 +88,6 @@ brew install bash-git-prompt
 brew install jq
 brew install cmake macvim
 
-brew install nvm
-
 # Password management
 brew cask install --appdir="/Applications" 1password
 brew cask install 1password-cli
