@@ -8,7 +8,7 @@ alias sb='source ~/.bashrc'
 alias ca='cat ~/.bash/aliases'
 alias mysql='mysql --auto-rehash -u root -p'
 
-#git aliases
+# git aliases
 alias g='git'
 alias glx='git log --graph --all --decorate --pretty=format:"%C(magenta)%h %C(blue)%ai %C(green)%an %C(cyan)%s %C(yellow bold)%d"'
 alias gco='git checkout'
@@ -26,8 +26,11 @@ alias gc-jks='git clone git@github.com:aedenj/javascript-kata-starter.git'
 alias gc-gks='git clone git@github.com:aedenj/golang-kata-starter.git'
 alias gc-sks='git clone git@github.com:aedenj/scala-kata-starter.git'
 
-#scala
+# scala
 alias scalad='docker run -it --rm hseeberger/scala-sbt:8u222_1.3.5_2.13.1 scala'
 
-#javascript
+# javascript
 alias jsd='docker run -it --rm node:latest node'
+
+# spark
+alias spark-shelld='docker run -it --rm -e ENABLE_INIT_DAEMON=false -w /spark -v "$PWD":/data bde2020/spark-master:2.4.4-hadoop2.7 bin/spark-shell'
