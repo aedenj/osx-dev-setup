@@ -34,3 +34,6 @@ alias jsd='docker run -it --rm node:latest node'
 
 # spark
 alias spark-shelld='docker run -it --rm -e ENABLE_INIT_DAEMON=false -w /spark -v "$PWD":/data bde2020/spark-master:2.4.4-hadoop2.7 bin/spark-shell'
+
+#jupyter
+alias jupyterd='f(){ docker run --rm -p $1:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/jovyan/work jupyter/datascience-notebook; unset -f f; }; f'
