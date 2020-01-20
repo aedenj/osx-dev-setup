@@ -2,11 +2,8 @@ alias ls='ls -G'
 alias ll='ls -Al'
 alias mkdir='mkdir -pv'
 alias ..='cd ..'
-alias b='bundle'
-alias be='bundle exec'
 alias sb='source ~/.bashrc'
 alias ca='cat ~/.bash/aliases'
-alias mysql='mysql --auto-rehash -u root -p'
 
 # git aliases
 alias g='git'
