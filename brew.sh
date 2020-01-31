@@ -73,6 +73,7 @@ brew cask install --appdir="~/Applications" java
 brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" anaconda
 brew cask install --appdir="/Applications" wireshark
+brew cask install --appdir="/Applications" slack
 
 brew cask install --appdir="/Applications" visual-studio-code
 code --install-extension vscodevim.vim
