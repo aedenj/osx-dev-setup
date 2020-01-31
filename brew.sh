@@ -79,6 +79,7 @@ brew cask install --appdir="/Applications" visual-studio-code
 code --install-extension vscodevim.vim
 code --install-extension ms-vscode.Go
 code --install-extension ms-vscode-remote.remote-containers
+code --install-extension scalameta.metals
 
 
 
