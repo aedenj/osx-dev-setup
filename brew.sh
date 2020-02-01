@@ -18,7 +18,6 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-
 # Make sure we’re using the latest Homebrew.
 brew update
 
@@ -69,7 +68,10 @@ brew tap homebrew/cask-versions
 # Development tools
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="/Applications" iterm2
-brew cask install --appdir="~/Applications" java
+
+# Java11 is needed by the scala metals plugin for vscode
+brew cask install --appdir="~/Applications" java11
+
 brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" anaconda
 brew cask install --appdir="/Applications" wireshark
@@ -80,7 +82,6 @@ code --install-extension vscodevim.vim
 code --install-extension ms-vscode.Go
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension scalameta.metals
-
 
 
 brew install ack
