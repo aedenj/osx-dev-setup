@@ -64,6 +64,7 @@ chsh -s /usr/local/bin/bash
 # ###############################################################################################
 brew install cask
 brew tap homebrew/cask-versions
+brew install brew-cask-completion
 
 # Development tools
 brew cask install --appdir="/Applications" alfred
@@ -88,6 +89,8 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false        
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false # For VS Code Insider
 defaults delete -g ApplePressAndHoldEnabled # If necessary, reset global default
 
+brew install bash-completion@2
+brew link --overwrite bash-completion@2
 
 brew install ack
 brew install git
@@ -95,6 +98,13 @@ brew install git-extras
 brew install bash-git-prompt
 brew install jq
 brew install cmake macvim
+brew install minikube
+
+brew install kubernetes-cli
+brew link --overwrite kubernetes-cli
+
+brew install docker-completion
+brew install docker-compose-completion
 
 # Password management
 brew cask install --appdir="/Applications" 1password

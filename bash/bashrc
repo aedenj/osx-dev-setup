@@ -9,9 +9,8 @@ if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
-if [ -f ~/.bash/git-completion.bash ]; then
-    . ~/.bash/git-completion.bash
-fi
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 
 #iterm 2 escape code for color preset
 echo -e "\033]1337;SetColors=preset=Pastel (Dark Background)\a"
