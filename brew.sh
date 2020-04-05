@@ -79,6 +79,7 @@ brew cask install --appdir="/Applications" wireshark
 brew cask install --appdir="/Applications" slack
 
 brew cask install --appdir="/Applications" tor-browser
+brew cask install --appdir="/Applications" google-chrome
 
 brew cask install --appdir="/Applications" visual-studio-code
 code --install-extension vscodevim.vim
