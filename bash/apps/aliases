@@ -34,4 +34,8 @@ alias jsd='docker run -it --rm node:latest node'
 alias spark-shelld='docker run -it --rm -e ENABLE_INIT_DAEMON=false -w /spark -v "$PWD":/data bde2020/spark-master:2.4.4-hadoop2.7 bin/spark-shell'
 
 #jupyter
-alias jupyterd='f(){ docker run --rm -p $1:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/jovyan/work jupyter/datascience-notebook; unset -f f; }; f'
+alias jupyterd='f(){ docker run --rm -p $1:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v "$PWD":/home/jovyan/work jupyter/datascience-notebook; unset -f f; }; f'
+
+#terraform
+alias terrad='docker run -it --rm --name terraform -v $(pwd):/workspace -w /workspace hashicorp/terraform:light'
+alias terrashell='docker run -it --rm --name terraform -v $(pwd):/workspace -w /workspace --entrypoint /bin/sh hashicorp/terraform:light'
