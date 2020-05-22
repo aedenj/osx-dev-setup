@@ -28,7 +28,8 @@ alias gc-sks='git clone git@github.com:aedenj/scala-kata-starter.git'
 alias scalad='docker run -it --rm hseeberger/scala-sbt:8u222_1.3.5_2.13.1 scala'
 
 # javascript
-alias jsd='docker run -it --rm node:latest node'
+alias noded='docker run -it --rm node:latest node'
+alias npmd='docker run -it --rm -v $(pwd):/app -w /app node:latest npm'
 
 # spark
 alias spark-shelld='docker run -it --rm -e ENABLE_INIT_DAEMON=false -w /spark -v "$PWD":/data bde2020/spark-master:2.4.4-hadoop2.7 bin/spark-shell'
@@ -37,5 +38,8 @@ alias spark-shelld='docker run -it --rm -e ENABLE_INIT_DAEMON=false -w /spark -v
 alias jupyterd='f(){ docker run --rm -p $1:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v "$PWD":/home/jovyan/work jupyter/datascience-notebook; unset -f f; }; f'
 
 #terraform
-alias terrad='docker run -it --rm --name terraform -v $(pwd):/workspace -w /workspace hashicorp/terraform:light'
-alias terrashell='docker run -it --rm --name terraform -v $(pwd):/workspace -w /workspace --entrypoint /bin/sh hashicorp/terraform:light'
+alias terrad='docker run -it --rm --name terraform -v ~/.aws:/root/.aws -v $(pwd):/workspace -w /workspace -e TF_LOG=INFO hashicorp/terraform:light'
+alias terrashell='docker run -it --rm --name terraform -v ~/.aws:/root/.aws -v $(pwd):/workspace -w /workspace --entrypoint /bin/sh hashicorp/terraform:light'
+
+#aws
+alias awsd='docker run --rm -it  -v ~/.aws:/root/.aws -v $(pwd):/aws --network aws-net amazon/aws-cli'

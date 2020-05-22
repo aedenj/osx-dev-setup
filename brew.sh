@@ -102,6 +102,13 @@ brew install jq
 brew install cmake macvim
 brew install minikube
 
+# needed mostly for coc.nvim
+brew install nvm
+mkdir ~/.nvm
+nvm install node
+
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+
 brew install kubernetes-cli
 brew link --overwrite kubernetes-cli
 
