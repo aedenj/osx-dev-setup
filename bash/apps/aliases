@@ -43,3 +43,11 @@ alias terrashell='docker run -it --rm --name terraform -v ~/.aws:/root/.aws -v $
 
 #aws
 alias awsd='docker run --rm -it  -v ~/.aws:/root/.aws -v $(pwd):/aws --network aws-net amazon/aws-cli'
+
+#kafka
+alias kafkad='docker run --rm -it --network kafka-net wurstmeister/kafka:latest'
+alias kafkacreatetopic='f() { kafkad kafka-topics.sh --create --bootstrap-server broker-1:19092,broker-2:19093,broker-3:19094 --partitions $1 --replication-factor $2 --topic $3; unset -f f; }; f'
+alias kafkadeletetopic='f() { kafkad kafka-topics.sh --delete --bootstrap-server broker-1:19092,broker-2:19093,broker-3:19094 --topic $1; unset -f f; }; f'
+
+#gradle
+alias gradled='docker run --rm -u gradle -v gradle-cache:/home/gradle/.gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle:latest gradle'
