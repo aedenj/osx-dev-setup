@@ -51,3 +51,6 @@ alias kafkadeletetopic='f() { kafkad kafka-topics.sh --delete --bootstrap-server
 
 #gradle
 alias gradled='docker run --rm -u gradle -v gradle-cache:/home/gradle/.gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle:latest gradle'
+
+#flink
+alias flinkd='docker run --rm -v "$PWD":/app -w /app --network kafka-net flink:latest flink'
