@@ -91,6 +91,9 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false        
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false # For VS Code Insider
 defaults delete -g ApplePressAndHoldEnabled # If necessary, reset global default
 
+brew cask install --appdir="/Applications" intellij-idea-ce
+defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
+
 brew install bash-completion@2
 brew link --overwrite bash-completion@2
 
