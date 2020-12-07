@@ -67,31 +67,31 @@ brew tap homebrew/cask-versions
 brew install brew-cask-completion
 
 # Development tools
-brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="/Applications" iterm2
+brew install --cask --appdir="/Applications" alfred
+brew install --cask --appdir="/Applications" iterm2
 
 # Java11 is needed by the scala metals plugin for vscode
-brew cask install --appdir="~/Applications" java11
+brew install --cask --appdir="~/Applications" java11
 
-brew cask install --appdir="/Applications" docker
-brew cask install --appdir="/Applications" anaconda
-brew cask install --appdir="/Applications" wireshark
-brew cask install --appdir="/Applications" slack
+brew install --cask --appdir="/Applications" docker
+brew install --cask --appdir="/Applications" anaconda
+brew install --cask --appdir="/Applications" wireshark
+brew install --cask --appdir="/Applications" slack
 
-brew cask install --appdir="/Applications" tor-browser
-brew cask install --appdir="/Applications" google-chrome
+brew install --cask --appdir="/Applications" tor-browser
+brew install --cask --appdir="/Applications" google-chrome
 
-brew cask install --appdir="/Applications" visual-studio-code
-code --install-extension vscodevim.vim
-code --install-extension ms-vscode.Go
-code --install-extension ms-vscode-remote.remote-containers
-code --install-extension scalameta.metals
-code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+brew install --cask --appdir="/Applications" visual-studio-code
+code --install-extension --force vscodevim.vim
+code --install-extension --force ms-vscode.Go
+code --install-extension --force ms-vscode-remote.remote-containers
+code --install-extension --force scalameta.metals
+code --install-extension --force ms-kubernetes-tools.vscode-kubernetes-tools
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false         # For VS Code
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false # For VS Code Insider
 defaults delete -g ApplePressAndHoldEnabled # If necessary, reset global default
 
-brew cask install --appdir="/Applications" intellij-idea-ce
+brew install --cask --appdir="/Applications" intellij-idea-ce
 defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 
 brew install bash-completion@2
@@ -119,8 +119,8 @@ brew install docker-completion
 brew install docker-compose-completion
 
 # Password management
-brew cask install --appdir="/Applications" 1password
-brew cask install 1password-cli
+brew install --cask --appdir="/Applications" 1password
+brew install --cask 1password-cli
 
 # Remove outdated versions from the cellar.
 brew cleanup
