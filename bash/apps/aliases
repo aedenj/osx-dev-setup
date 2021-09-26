@@ -36,7 +36,7 @@ alias npmd='docker run -it --rm -v $(pwd):/app -w /app node:latest npm'
 alias spark-shelld='docker run -it --rm -e ENABLE_INIT_DAEMON=false -w /spark -v "$PWD":/data bde2020/spark-master:2.4.4-hadoop2.7 bin/spark-shell'
 
 #jupyter
-alias jupyterd='f(){ docker run --rm -p $1:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v "$PWD":/home/jovyan/work jupyter/datascience-notebook; unset -f f; }; f'
+alias jupyterd='f(){ docker run --rm -p $1:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v ~/.kaggle:/home/jovyan/.kaggle -v "$PWD":/home/jovyan/work jupyter/pyspark-notebook; unset -f f; }; f'
 
 #terraform
 alias terrad='docker run -it --rm --name terraform -v ~/.aws:/root/.aws -v $(pwd):/workspace -w /workspace -e TF_LOG=INFO hashicorp/terraform:light'
@@ -54,6 +54,7 @@ alias kafkadeletetopic='f() { kafkad kafka-topics.sh --delete --bootstrap-server
 alias gradled='docker run --rm -u gradle -v gradle-cache:/home/gradle/.gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle:latest gradle'
 alias gradlejre11d='docker run --rm -u gradle -v gradle-cache:/home/gradle/.gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle:jre11 gradle'
 alias gradlejre14d='docker run --rm -u gradle -v gradle-cache:/home/gradle/.gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle:jre14 gradle'
+alias gradlejre15d='docker run --rm -u gradle -v gradle-cache:/home/gradle/.gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle:jre15 gradle'
 
 #flink
 alias flinkd='docker run --rm -v "$PWD":/app -w /app --network kafka-net flink:latest flink'
