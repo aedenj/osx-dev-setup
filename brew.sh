@@ -99,7 +99,7 @@ brew link --overwrite bash-completion@2
 
 brew install ack
 brew install git
-brew install git-extras
+brew install gh
 brew install bash-git-prompt
 brew install jq
 brew install cmake macvim
