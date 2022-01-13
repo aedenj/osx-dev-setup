@@ -122,5 +122,8 @@ brew install docker-compose-completion
 brew install --cask --appdir="/Applications" 1password
 brew install --cask 1password-cli
 
+# Google
+brew install --cask --appdir="/Applications" google-drive
+
 # Remove outdated versions from the cellar.
 brew cleanup
