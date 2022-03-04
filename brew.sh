@@ -72,6 +72,7 @@ brew install --cask --appdir="/Applications" iterm2
 
 # Java11 is needed by the scala metals plugin for vscode
 brew install --cask --appdir="~/Applications" java11
+brew install --cask --appdir="~/Applications" jdk-mission-control
 
 brew install --cask --appdir="/Applications" docker
 brew install --cask --appdir="/Applications" anaconda
