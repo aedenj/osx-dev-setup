@@ -116,9 +116,6 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 brew install kubernetes-cli
 brew link --overwrite kubernetes-cli
 
-brew install docker-completion
-brew install docker-compose-completion
-
 # Password management
 brew install --cask --appdir="/Applications" 1password
 brew install --cask 1password-cli
