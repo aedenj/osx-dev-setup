@@ -105,6 +105,7 @@ brew install bash-git-prompt
 brew install jq
 brew install cmake macvim
 brew install minikube
+brew install telnet
 
 # needed mostly for coc.nvim
 brew install nvm

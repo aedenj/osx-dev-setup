@@ -24,6 +24,7 @@ alias gc-jks='git clone git@github.com:aedenj/javascript-kata-starter.git'
 alias gc-gks='git clone git@github.com:aedenj/golang-kata-starter.git'
 alias gc-sks='git clone git@github.com:aedenj/scala-kata-starter.git'
 alias gc-javaks='git clone git@github.com:aedenj/java-kata-starter.git'
+alias gc-kotlinks='git clone git@github.com:aedenj/kotlin-kata-starter.git'
 
 # scala
 alias scalad='docker run -it --rm hseeberger/scala-sbt:8u222_1.3.5_2.13.1 scala'
