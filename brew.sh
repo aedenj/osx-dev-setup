@@ -106,6 +106,7 @@ brew install jq
 brew install cmake macvim
 brew install minikube
 brew install telnet
+brew install csvkit
 
 # needed mostly for coc.nvim
 brew install nvm
