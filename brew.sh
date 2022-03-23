@@ -125,5 +125,8 @@ brew install --cask 1password-cli
 # Google
 brew install --cask --appdir="/Applications" google-drive
 
+# Kafka Tools
+brew install kcat
+
 # Remove outdated versions from the cellar.
 brew cleanup
