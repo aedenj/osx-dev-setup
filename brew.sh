@@ -82,6 +82,8 @@ brew install --cask --appdir="/Applications" slack
 brew install --cask --appdir="/Applications" tor-browser
 brew install --cask --appdir="/Applications" brave-browser
 
+brew install --cask --appdir="/Applications" streamlabs-obs
+
 brew install --cask --appdir="/Applications" visual-studio-code
 code --install-extension --force vscodevim.vim
 code --install-extension --force ms-vscode.Go
@@ -104,9 +106,9 @@ brew install gh
 brew install bash-git-prompt
 brew install jq
 brew install cmake macvim
-brew install minikube
 brew install telnet
 brew install csvkit
+
 
 # needed mostly for coc.nvim
 brew install nvm
@@ -115,8 +117,10 @@ nvm install node
 
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
+brew install minikube
 brew install kubernetes-cli
 brew link --overwrite kubernetes-cli
+brew install helm
 
 # Password management
 brew install --cask --appdir="/Applications" 1password
