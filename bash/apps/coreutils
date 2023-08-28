@@ -1,0 +1,2 @@
+PATH=/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH
+PATH=/usr/local/opt/gettext/bin:$PATH
