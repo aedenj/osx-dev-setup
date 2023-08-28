@@ -88,10 +88,15 @@ brew install --cask --appdir="/Applications" wireshark
 brew install --cask --appdir="/Applications" slack
 brew install --cask --appdir="/Applications" brave-browser
 
+brew install java11
+# For the system Java wrappers to find this JDK, symlink it with
+sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+
+brew install --cask --appdir="/Applications" jdk-mission-control
+
 brew install --cask --appdir="/Applications" intellij-idea
 defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 
-brew install --cask --appdir="/Applications" jdk-mission-control
 
 brew install minikube
 brew install kubernetes-cli
