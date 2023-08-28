@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#
+set -e
 
 # Install command-line tools using Homebrew.
 
