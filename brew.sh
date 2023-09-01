@@ -72,6 +72,10 @@ brew install brew-cask-completion
 brew install bash-completion@2
 brew link --overwrite bash-completion@2
 
+
+# Mac App Store CLI: https://github.com/mas-cli/mas
+brew install mas
+
 brew install ack
 brew install git
 brew install gh
@@ -81,6 +85,8 @@ brew install telnet
 brew install csvkit
 brew install --cask --appdir="/Applications" iterm2
 
+brew install cmake cmake-docso
+brew install macvim
 
 # Development tools
 brew install --cask --appdir="/Applications" docker

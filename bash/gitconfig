@@ -19,6 +19,10 @@
     b = branch
 [merge]
     tool = vimdiff
+[difftool]
+    prompt = false 
+[diff]
+    tool = vimdiff
 [core]
 	excludesfile = /Users/aedenjameson/.gitignore
 [push]
