@@ -44,14 +44,6 @@ brew install gnu-sed
 brew install bash
 brew tap homebrew/core
 
-# ###############################################################################################
-# bash-completion2
-# Warning!!!       bash-completion2 have refrences in ~/.bash_profile  file
-#                  by defaults:
-#                              lines 45-68 in .bash_profile are comments out
-#                              un comment them based on your needs
-# ###############################################################################################
-brew install bash-completion2
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
 
@@ -67,10 +59,6 @@ chsh -s /bin/bash
 brew install cask
 brew tap homebrew/cask-versions
 brew install brew-cask-completion
-
-# Install Basic Utils
-brew install bash-completion@2
-brew link --overwrite bash-completion@2
 
 
 # Mac App Store CLI: https://github.com/mas-cli/mas
