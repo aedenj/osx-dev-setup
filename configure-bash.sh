@@ -10,3 +10,4 @@ ln -s $OSXDEVSETUP_HOME/bash/apps/aliases ~/.bash/aliases
 ln -s $OSXDEVSETUP_HOME/bash/apps/brew ~/.bash/brew
 ln -s $OSXDEVSETUP_HOME/bash/apps/coreutils ~/.bash/coreutils
 ln -s $OSXDEVSETUP_HOME/bash/apps/java ~/.bash/java
+ln -s $OSXDEVSETUP_HOME/bash/apps/nvm ~/.bash/nvm

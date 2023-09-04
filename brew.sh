@@ -91,6 +91,12 @@ brew install --cask --appdir="/Applications" jdk-mission-control
 brew install --cask --appdir="/Applications" intellij-idea
 defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 
+# javascript stuff
+brew install nvm
+mkdir ~/.nvm
+nvm install node
+
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 brew install minikube
 brew install kubernetes-cli

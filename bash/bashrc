@@ -89,6 +89,7 @@ completions=(
   gh
   git
   gradle
+  nvm
   ssh
 )
 
@@ -106,6 +107,7 @@ aliases=(
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  nvm
   bashmarks
 )
 
@@ -147,3 +149,5 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 source ~/.bash/bashrc_ext
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
