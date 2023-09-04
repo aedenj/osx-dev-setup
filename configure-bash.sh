@@ -1,5 +1,7 @@
 export OSH="$HOME/.osxdevsetup/oh-my-bash"; bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
+ln -s $OSXDEVSETUP_HOME/bash/bashrc  ~/.bashrc
+ln -s $OSXDEVSETUP_HOME/bash/bash_profile ~/.bash_profile
 ln -s $OSXDEVSETUP_HOME/bash/gitconfig ~/.gitconfig
 
 mkdir ~/.bash
