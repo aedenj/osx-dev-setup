@@ -90,6 +90,9 @@ brew install --cask --appdir="/Applications" jdk-mission-control
 
 brew install --cask --appdir="/Applications" intellij-idea
 defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled 0
+open -na "IntelliJ IDEA.app" --args installPlugins IdeaVIM
+sudo ln -s $OSXDEVSETUP_HOME/scripts/idea /usr/local/bin/idea
 
 # javascript stuff
 brew install nvm
