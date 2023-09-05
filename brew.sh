@@ -94,6 +94,7 @@ defaults write -g ApplePressAndHoldEnabled 0
 open -na "IntelliJ IDEA.app" --args installPlugins IdeaVIM
 open -na "IntelliJ IDEA.app" --args installPlugins com.github.copilot
 open -na "IntelliJ IDEA.app" --args installPlugins com.mallowigi
+open -na "IntelliJ IDEA.app" --args installPlugins "String Manipulation"
 sudo ln -s $OSXDEVSETUP_HOME/scripts/idea /usr/local/bin/idea
 
 # javascript stuff
