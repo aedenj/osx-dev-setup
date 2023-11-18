@@ -80,7 +80,9 @@ brew install macvim
 brew install --cask --appdir="/Applications" docker
 brew install --cask --appdir="/Applications" wireshark
 brew install --cask --appdir="/Applications" slack
+brew install --cask --appdir="/Applications" discord
 brew install --cask --appdir="/Applications" brave-browser
+brew install --cask --appdir="/Applications" zoom
 
 brew install java11
 # For the system Java wrappers to find this JDK, symlink it with
