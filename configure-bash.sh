@@ -11,3 +11,4 @@ ln -s $OSXDEVSETUP_HOME/bash/apps/brew ~/.bash/brew
 ln -s $OSXDEVSETUP_HOME/bash/apps/coreutils ~/.bash/coreutils
 ln -s $OSXDEVSETUP_HOME/bash/apps/java ~/.bash/java
 ln -s $OSXDEVSETUP_HOME/bash/apps/nvm ~/.bash/nvm
+ln -s $OSXDEVSETUP_HOME/bash/apps/asdf ~/.bash/asdf

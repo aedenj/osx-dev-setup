@@ -3,6 +3,7 @@ source ~/.bash/brew
 source ~/.bash/coreutils
 source ~/.bash/java
 source ~/.bash/nvm
+source ~/.bash/asdf
 
 #iterm 2 escape code for color preset
 echo -e "\033]1337;SetColors=preset=Pastel (Dark Background)\a"

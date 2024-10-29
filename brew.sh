@@ -76,6 +76,9 @@ brew install --cask --appdir="/Applications" iterm2
 brew install cmake cmake-docso
 brew install macvim
 
+# our version manager
+brew install asdf
+
 # Development tools
 brew install --cask --appdir="/Applications" docker
 brew install --cask --appdir="/Applications" wireshark
@@ -84,11 +87,7 @@ brew install --cask --appdir="/Applications" discord
 brew install --cask --appdir="/Applications" brave-browser
 brew install --cask --appdir="/Applications" tor-browser
 brew install --cask --appdir="/Applications" zoom
-
-brew install java11
-# For the system Java wrappers to find this JDK, symlink it with
-sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
-
+brew install --cask --appdir="/Applications" softraid
 brew install --cask --appdir="/Applications" jdk-mission-control
 
 brew install --cask --appdir="/Applications" intellij-idea
@@ -98,6 +97,7 @@ open -na "IntelliJ IDEA.app" --args installPlugins IdeaVIM
 open -na "IntelliJ IDEA.app" --args installPlugins com.github.copilot
 open -na "IntelliJ IDEA.app" --args installPlugins com.mallowigi
 open -na "IntelliJ IDEA.app" --args installPlugins "String Manipulation"
+open -na "IntelliJ IDEA.app" --args installPlugins org.intellij.plugins.hcl
 sudo ln -s $OSXDEVSETUP_HOME/scripts/idea /usr/local/bin/idea
 
 # javascript stuff
@@ -107,6 +107,9 @@ nvm install node
 
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
+brew install terraform
+brew install terragrunt
+brew install skaffold
 brew install minikube
 brew install kubernetes-cli
 brew link --overwrite kubernetes-cli
