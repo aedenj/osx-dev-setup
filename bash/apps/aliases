@@ -30,7 +30,7 @@ alias terrad='docker run -it --rm --name terraform -v ~/.aws:/root/.aws -v $(pwd
 alias terrashell='docker run -it --rm --name terraform -v ~/.aws:/root/.aws -v $(pwd):/workspace -w /workspace --entrypoint /bin/sh hashicorp/terraform:latest'
 
 #aws
-alias awsd='docker run --rm -it  -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
+alias awsd='docker run --rm -it -v ~/.kube:/root/.kube -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
 
 #gradle
 alias gradled='docker run --rm -u gradle -v gradle-cache:/home/gradle/.gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle:latest gradle'

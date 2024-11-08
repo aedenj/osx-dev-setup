@@ -98,6 +98,8 @@ open -na "IntelliJ IDEA.app" --args installPlugins com.github.copilot
 open -na "IntelliJ IDEA.app" --args installPlugins com.mallowigi
 open -na "IntelliJ IDEA.app" --args installPlugins "String Manipulation"
 open -na "IntelliJ IDEA.app" --args installPlugins org.intellij.plugins.hcl
+open -na "IntelliJ IDEA.app" --args installPlugins name.kropp.intellij.makefile
+
 sudo ln -s $OSXDEVSETUP_HOME/scripts/idea /usr/local/bin/idea
 
 # javascript stuff
@@ -107,9 +109,6 @@ nvm install node
 
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
-brew install terraform
-brew install terragrunt
-brew install skaffold
 brew install minikube
 brew install kubernetes-cli
 brew link --overwrite kubernetes-cli
