@@ -48,7 +48,7 @@ brew tap homebrew/core
 echo "Adding the newly installed shell to the list of allowed shells"
 
 # Prompts for password
-sudo bash -c 'echo /bin/bash >> /etc/shells'
+sudo bash -c 'echo /opt/homebrew/bin/bash >> /etc/shells'
 
 # Change to the new shell, prompts for password
 chsh -s /bin/bash
