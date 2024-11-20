@@ -56,7 +56,7 @@ runme() {
 
 echo " "
 if [ ! -d $OSXDEVSETUP_HOME ]; then
-  runme git clone ${OSXDEVSETUP_GITPATH} ${OSXDEVSETUP_HOME} --recursive
+  runme git clone --recursive ${OSXDEVSETUP_GITPATH} ${OSXDEVSETUP_HOME} 
 else
   echo "INFO: The repository ${OSXDEVSETUP_GITPATH} has already been cloned to ${OSXDEVSETUP_HOME}."
 fi
