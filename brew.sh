@@ -42,7 +42,6 @@ brew install gnu-sed
 # Install Bash
 # ###############################################################################################
 brew install bash
-brew tap homebrew/core
 
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
@@ -51,13 +50,12 @@ echo "Adding the newly installed shell to the list of allowed shells"
 sudo bash -c 'echo /opt/homebrew/bin/bash >> /etc/shells'
 
 # Change to the new shell, prompts for password
-chsh -s /bin/bash
+chsh -s /opt/homebrew/bin/bash
 
 # ###############################################################################################
 # Install Cask
 # ###############################################################################################
 brew install cask
-brew tap homebrew/cask-versions
 brew install brew-cask-completion
 
 
@@ -73,7 +71,7 @@ brew install telnet
 brew install csvkit
 brew install --cask --appdir="/Applications" iterm2
 
-brew install cmake cmake-docso
+brew install cmake cmake-docs
 brew install macvim
 
 # our version manager
