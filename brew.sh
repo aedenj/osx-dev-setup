@@ -98,11 +98,12 @@ open -na "IntelliJ IDEA.app" --args installPlugins "String Manipulation"
 open -na "IntelliJ IDEA.app" --args installPlugins org.intellij.plugins.hcl
 open -na "IntelliJ IDEA.app" --args installPlugins name.kropp.intellij.makefile
 
-sudo ln -s $OSXDEVSETUP_HOME/scripts/idea /usr/local/bin/idea
+sudo ln -sf $OSXDEVSETUP_HOME/scripts/idea /usr/local/bin/idea
 
 # javascript stuff
 brew install nvm
-mkdir ~/.nvm
+mkdir -p ~/.nvm
+source $OSXDEVSETUP_HOME/bash/apps/nvm
 nvm install node
 
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
