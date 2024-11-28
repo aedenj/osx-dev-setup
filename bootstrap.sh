@@ -39,7 +39,7 @@ echo "| Step 01.05: Download setup repository                                   
 echo "+------------------------------------------------------------------------------------------------------------+"
 
 export OSXDEVSETUP_HOME=$HOME/.osxdevsetup
-export OSXDEVSETUP_GITPATH=https://github.com/aedenj/osx-dev-setup.git
+export OSXDEVSETUP_GITPATH=git@github.com:aedenj/osx-dev-setup.git
 
 runme() {
 	cmd=$*
