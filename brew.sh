@@ -64,7 +64,6 @@ brew install mas
 
 brew install ack
 brew install git
-brew install gh
 brew install bash-git-prompt
 brew install jq
 brew install telnet
@@ -111,7 +110,6 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 brew install minikube
 brew install kubernetes-cli
 brew link --overwrite kubernetes-cli
-brew install helm
 
 # Password management
 brew install --cask --appdir="/Applications" 1password

@@ -23,11 +23,22 @@ asdf plugin-add terraform https://github.com/asdf-community/asdf-hashicorp.git
 asdf install terraform latest
 asdf global terraform latest
 
-
 asdf plugin-add terragrunt
 asdf install terragrunt latest
 asdf global terragrunt latest
 
+asdf plugin-add helm https://github.com/Antiarchitect/asdf-helm.git
+asdf install helm latest
+asdf global helm latest
+
 asdf plugin-add skaffold https://github.com/virtualstaticvoid/asdf-skaffold.git
 asdf install skaffold latest
 asdf global skaffold latest
+
+asdf plugin-add aws-nuke https://github.com/bersalazar/asdf-aws-nuke.git
+asdf install aws-nuke latest
+asdf global aws-nuke latest
+
+asdf plugin-add github-cli https://github.com/bartlomiejdanek/asdf-github-cli.git
+asdf install github-cli latest
+asdf global github-cli latest
