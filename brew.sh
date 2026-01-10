@@ -86,6 +86,9 @@ brew install --cask --appdir="/Applications" tor-browser
 brew install --cask --appdir="/Applications" zoom
 brew install --cask --appdir="/Applications" softraid
 brew install --cask --appdir="/Applications" jdk-mission-control
+brew install --cask --appdir="/Applications" cockatrice
+brew install --cask --appdir="/Applications" claude-code
+brew install --cask --appdir="/Applications" codex
 
 brew install --cask --appdir="/Applications" intellij-idea
 defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
@@ -96,6 +99,8 @@ open -na "IntelliJ IDEA.app" --args installPlugins com.mallowigi
 open -na "IntelliJ IDEA.app" --args installPlugins "String Manipulation"
 open -na "IntelliJ IDEA.app" --args installPlugins org.intellij.plugins.hcl
 open -na "IntelliJ IDEA.app" --args installPlugins name.kropp.intellij.makefile
+open -na "IntelliJ IDEA.app" --args installPlugins PythonCore
+open -na "IntelliJ IDEA.app" --args installPlugins Pythonid
 
 sudo ln -sf $OSXDEVSETUP_HOME/scripts/idea /usr/local/bin/idea
 
