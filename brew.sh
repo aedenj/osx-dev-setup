@@ -69,6 +69,7 @@ brew install jq
 brew install telnet
 brew install csvkit
 brew install --cask --appdir="/Applications" iterm2
+brew install --cask --appdir="/Applications" itermai
 
 brew install cmake cmake-docs
 brew install macvim
