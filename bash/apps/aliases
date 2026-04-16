@@ -3,13 +3,13 @@ alias ca='cat ~/.bash/aliases'
 # git aliases
 alias glx='git log --graph --all --decorate --pretty=format:"%C(magenta)%h %C(blue)%ai %C(green)%an %C(cyan)%s %C(yellow bold)%d"'
 alias gcb='git checkout -b'
-alias gcm='git checkout master'
+alias gcm='git checkout main'
 alias gs='git status'
 alias gf='git fetch -p'
 alias gp='git pull'
 alias gct='git add --all :/;git commit -am'
 alias gps='git push'
-alias grm='git rebase master'
+alias grm='git rebase main'
 alias grc='git rebase --continue'
 alias gca='git commit --amend'
 alias gcaf='git add .;git commit --amend --no-edit;git push -f'
@@ -24,6 +24,10 @@ alias pks='f(){ git clone git@github.com:aedenj/python-kata-starter.git $1; cd $
 # javascript
 alias noded='docker run -it --rm node:latest node'
 alias npmd='docker run -it --rm -v $(pwd):/app -w /app node:latest npm'
+
+#python
+alias python='$(brew --prefix)/bin/python3'
+alias pip='$(brew --prefix)/bin/python3 -m pip'
 
 #jupyter
 alias jupyter-pyspark='f(){ docker run --rm -p $1:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v ~/.kaggle:/home/jovyan/.kaggle -v "$PWD":/home/jovyan/work quay.io/jupyter/pyspark-notebook; unset -f f; }; f'

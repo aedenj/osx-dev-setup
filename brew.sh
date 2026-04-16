@@ -124,5 +124,13 @@ brew install --cask 1password-cli
 # Kafka Tools
 brew install kcat
 
+# Python
+brew install pipx
+brew install uv
+
+# Coding
+brew install --cask --appdir="/Applications" claude-code
+
 # Remove outdated versions from the cellar.
 brew cleanup
+
