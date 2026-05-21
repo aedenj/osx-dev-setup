@@ -23,6 +23,7 @@ function setup() {
       echo ""
       source ./brew.sh
       source ./configure-bash.sh
+      source ./configure-claude.sh
     fi
     if [ $ARG == "githubkey" ] || [ $ARG == "all" ]; then
       echo "------------------------------"
